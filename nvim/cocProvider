@@ -1,0 +1,53 @@
+
+coc: health#coc#check
+  - OK: Environment check passed
+  - WARNING: pyx command not work, some extensions may fail to work, checkout ":help |pythonx|"
+  - OK: Javascript bundle build/index.js found
+  - OK: Service started
+
+nvim: health#nvim#check
+========================================================================
+## Configuration
+  - OK: no issues found
+
+## Performance
+  - OK: Build type: RelWithDebInfo
+
+## Remote Plugins
+  - OK: Up to date
+
+## terminal
+  - INFO: key_backspace (kbs) terminfo entry: ? (not found)
+  - INFO: key_dc (kdch1) terminfo entry: ? (not found)
+
+provider: health#provider#check
+========================================================================
+## Clipboard (optional)
+  - OK: Clipboard tool found: win32yank
+
+## Python virtualenv
+  - OK: no $VIRTUAL_ENV
+
+## Ruby provider (optional)
+  - WARNING: `ruby` and `gem` must be in $PATH.
+    - ADVICE:
+      - Install Ruby and verify that `ruby` and `gem` commands work.
+
+## Node.js provider (optional)
+  - INFO: Node.js: v14.17.6
+  - WARNING: Missing "neovim" npm (or yarn) package.
+    - ADVICE:
+      - Run in shell: npm install -g neovim
+      - Run in shell (if you use yarn): yarn global add neovim
+
+vim.lsp: require("vim.lsp.health").check()
+========================================================================
+  - INFO: LSP log level : WARN
+  - INFO: Log path: C:\Users\Usuario\AppData\Local\Temp\nvim\lsp.log
+  - INFO: Log size: 0 KB
+
+vim.treesitter: require("vim.treesitter.health").check()
+========================================================================
+  - INFO: Runtime ABI version : 13
+  - OK: Loaded parser for c: ABI version 13
+
